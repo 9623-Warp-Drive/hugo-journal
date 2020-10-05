@@ -1,7 +1,13 @@
   <footer>
-  {{ partial "foot_custom.html" . }}
-  {{ with .Site.Params.footer }}
   <hr/>
+  {{ partial "foot_custom.html" . }}
+  Built with Hugo on {{ now.Format "January 2, 2006" }}.
+  {{ with .Site.Params.contact }}
+  </br>
+  {{ . | markdownify }}
+  {{ end }}
+  {{ with .Site.Params.license }}
+  </br>
   {{ . | markdownify }}
   {{ end }}
   </footer>
