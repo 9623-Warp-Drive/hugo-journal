@@ -5,11 +5,11 @@
 {{ with .Params.attendance }}
 
 <h3 class="attendance">Present: {{ delimit . ", " }}</h2>
-
+<h3 class="authors">{{ with $.Params.authors }} Written by {{ delimit . ", " }} {{ end}}</h3>
 {{ else }}
 
 {{ if (gt .Params.date 0) }}
-<h2 class="date">Written on {{ .Date.Format "01/02/2006" }}{{ with .Params.author }} by {{ . }} {{ end}}</h2>
+<h3 class="date">Written on {{ .Date.Format "01/02/2006" }}{{ with $.Params.authors }} by {{ delimit . ", " }} {{ end}}</h2>
 {{ end }}
 
 {{ end }}
