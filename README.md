@@ -1,28 +1,45 @@
-# HUGO XMIN
+# Hugo Journal
 
 ## _Keep it simple, but not simpler_
 
-**XMin** is a Hugo theme written by [Yihui Xie](https://yihui.name) in about four hours: half an hour was spent on the Hugo templates, and 3.5 hours were spent on styling. The main motivation for writing this theme was to provide a really minimal example to beginners of Hugo templates. This XMin theme contains about 130 lines of code in total, including the code in HTML templates and CSS (also counting empty lines).
+**Journal** is a Hugo theme designed for VEX Robotics teams to use when publishing a digital engineering journal. Based upon [hugo-xmin](https://github.com/yihui/hugo-xmin), originally written by [Yihui Xie](https://yihui.name), the theme's goal is to be clean, small, and have only as many features as is strictly necessary.
 
+
+
+## Try it out!
+
+If you're not already using Hugo, follow the [Quick Start Guide](https://gohugo.io/getting-started/quick-start/) to set it up. Then, within your Hugo project, run these commands to install the Journal theme:
 
 ```bash
-find . -not -path '*/exampleSite/*' \( -name '*.html' -o -name '*.css' \) | xargs wc -l
+git submodule add https://github.com/9623-Warp-Drive/hugo-journal.git
+
+echo 'theme = "hugo-journal"' >> config.toml
 ```
 
-```
-       5 ./layouts/404.html
-      12 ./layouts/_default/single.html
-      20 ./layouts/_default/list.html
-      13 ./layouts/_default/terms.html
-       0 ./layouts/partials/foot_custom.html
-       0 ./layouts/partials/head_custom.html
-       9 ./layouts/partials/footer.html
-      20 ./layouts/partials/header.html
-      51 ./static/css/style.css
-       7 ./static/css/fonts.css
-     137 total
+
+
+## Make it yours!
+
+If you'd like to customize the theme for your own use, you can make some changes in your `config.toml` file. Here is an example:
+
+```toml
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    name = "Notebook Entries"
+    url = "/posts/"
+    weight = 2
+
+[params]
+    description = "9623Z's notebook for the 2020-2021 season of VEX Robotics Competition - Change Up."
+    license = "This site is licensed under the [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) license."
+    contact = ""
 ```
 
-I can certainly further reduce the code, for example, by eliminating the CSS, but I believe a tiny bit of CSS can greatly improve readability. You cannot really find many CSS frameworks that only contain 50 lines of code.
 
-[![Screenshot](https://github.com/yihui/hugo-xmin/raw/master/images/screenshot.png)](https://xmin.yihui.name)
+
+## Open source!
+
+Journal is available under the MIT license. That means you're free to do basically whatever you want with it - so go ahead and tweak it! If you think your contributions could be helpful to others, submit a [pull request](https://github.com/9623-Warp-Drive/hugo-journal/pulls) to add them to this repository.

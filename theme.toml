@@ -1,12 +1,12 @@
-name = "XMin"
+name = "Journal"
 license = "MIT"
-licenselink = "https://github.com/yihui/hugo-xmin/blob/master/LICENSE.md"
-description = "eXtremely Minimal Hugo theme: about 150 lines of code in total, including HTML and CSS"
-homepage = "https://xmin.yihui.name"
+licenselink = "https://github.com/9623-Warp-Drive/hugo-journal/blob/main/LICENSE.md"
+description = "Extremely minimal journal-style theme for VRC teams"
+homepage = "https://github.com/9623-Warp-Drive/hugo-journal"
 tags = ["minimal", "blog", "personal", "clean", "simple", "starter", "minimalist"]
 features = ["blog"]
 min_version = "0.18"
 
 [author]
-  name = "Yihui Xie"
-  homepage = "https://yihui.name"
+  name = "Nathan Goller-Deitsch"
+  homepage = "https://quartzic.co"
