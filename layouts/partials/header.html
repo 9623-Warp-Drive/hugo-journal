@@ -6,6 +6,12 @@
     <title>{{ .Title }} | {{ .Site.Title }}</title>
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
+    {{ if eq (getenv "HUGO_ENV") "production" }}
+    {{ if .Site.Params.enableSimpleAnalytics }}
+    <script async defer src="https://simple.westashleyrobotics.com/latest.js"></script>
+    <noscript><img src="https://simple.westashleyrobotics.com/noscript.gif" alt=""/></noscript>
+    {{ end }}
+    {{ end }}
     {{ partial "head_custom.html" . }}
   </head>
 
