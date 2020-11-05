@@ -4,7 +4,7 @@
 
 {{ with .Params.attendance }}
 
-<h3 class="attendance">Present: {{ delimit . ", " }}</h2>
+<h3 class="attendance">Present: {{ delimit ((sort .)) ", " }}</h2>
 <h3 class="authors">{{ with $.Params.authors }} Written by {{ delimit . ", " }} {{ end}}</h3>
 {{ else }}
 
